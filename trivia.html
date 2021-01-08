@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+
+        <script>
+            function Incorrect()
+            {
+                document.getElementById("demo").innerHTML = "Incorrect"
+            }
+        
+            document.addEventListener('DOMContentLoaded', function() {
+                document.querySelector('#Q1').onclick = Incorrect; 
+            });
+            
+            document.addEventListener('DOMContentLoaded', function() {
+                document.querySelector('#Q2').onclick = Incorrect; 
+            });
+                
+            document.addEventListener('DOMContentLoaded', function() {
+                document.querySelector('#Q4').onclick = Incorrect;  
+            });
+            
+            document.addEventListener('DOMContentLoaded', function() {
+                document.querySelector('#Q3').onclick = function() {
+                    document.getElementById("demo").innerHTML = "Correct";
+                };
+            });
+
+
+        </script>
+
+    </head>
+    <body>
+        <div class="jumbotron">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+
+                What is the relationship name of a man that is married with your sister?<br><br>
+                <button id="Q1">husband-in-law</button>
+                <button id="Q2">father-in-law</button>
+                <button id="Q3">brother-in-law</button>
+                <button id="Q4">sister-in-law</button>
+                <p id="demo"></p>
+
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Never again</h2>
+                <hr>
+
+                <!-- TODO: Add free response question here -->
+
+            </div>
+
+        </div>
+    </body>
+</html>
